@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/cardView_orderlist_layout"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_margin="5dp"
+  app:cardCornerRadius="5dp">
+
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="horizontal"
+    android:weightSum="100">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="30"
+      android:orientation="vertical"
+      android:paddingLeft="5dp"
+      android:weightSum="100">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="50">
+
+        <TextView
+          android:id="@+id/tv_store_name_orderlist_layout"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/roboto"
+          android:text="Acme Tools"
+          android:textAllCaps="false"
+          android:textColor="#616161"
+          android:textSize="18sp"
+          android:textStyle="bold" />
+
+        <CheckBox
+          android:id="@+id/cb_customer_taxable_order_list_layout"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:visibility="gone" />
+
+
+        <TextView
+          android:id="@+id/tv_order_id_order_list_layout"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="order_id"
+          android:visibility="gone" />
+
+      </LinearLayout>
+
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="50">
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+          <TextView
+            android:id="@+id/tv_order_type_order_list_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto"
+            android:text="Invoice - "
+            android:textColor="#616161" />
+
+          <TextView
+            android:id="@+id/tv_invoice_order_list_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="00001 - Invoice"
+            android:textColor="#616161"
+            android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="70"
+      android:gravity="right"
+      android:orientation="horizontal"
+      android:paddingRight="5dp">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/Rs"
+        android:textColor="#616161"
+        android:textSize="18dp" />
+
+      <TextView
+        android:id="@+id/tv_total_order_list_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/basic"
+        android:gravity="right|center_vertical"
+        android:inputType="number"
+        android:text="80000"
+        android:textColor="#4AAD4F"
+        android:textSize="18sp" />
+    </LinearLayout>
+  </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

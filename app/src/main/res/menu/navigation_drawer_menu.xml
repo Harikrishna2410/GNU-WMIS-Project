@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group>
+            <item
+                android:title="Company Information"
+                android:id="@+id/navigation_company_info"
+                app:showAsAction="always"
+                />
+    </group>
+
+    <item android:title="Sync">
+
+        <menu>
+
+            <item android:title="Send Customers And Orders"
+                android:id="@+id/navigation_send_customers_and_orders"
+                android:icon="@drawable/baseline_cloud_upload_grey_900_48dp"
+                />
+
+            <item android:title="Sync All"
+                android:id="@+id/navigation_update_All"
+                android:icon="@drawable/ic_sync_grey_900_48dp"
+                />
+
+        </menu>
+
+    </item>
+
+    <item android:title="Tiles">
+
+
+        <menu>
+
+        <item
+            android:title="Settings"
+            android:id="@+id/drawer_Settings_menu"
+            android:icon="@drawable/ic_settings_grey_900_48dp"
+            />
+        <item
+            android:title="Log Out"
+            android:id="@+id/drawer_logout_menu"
+            android:icon="@drawable/ic_exit_to_app_grey_900_48dp"
+            />
+
+
+        </menu>
+
+    </item>
+
+
+</menu>

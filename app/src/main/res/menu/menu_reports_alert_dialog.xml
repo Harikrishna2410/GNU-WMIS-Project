@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/report_daily_sales"
+        android:title="Daily Sales"
+        android:icon="@drawable/ic_attach_money_grey_900_48dp"/>
+
+    <item
+        android:id="@+id/report_reconsilation"
+        android:title="Reconcilation"
+        android:icon="@drawable/ic_show_chart_grey_900_48dp"/>
+
+    <item
+        android:id="@+id/report_inventory_replenish"
+        android:title="Inventory Replenish"
+        android:icon="@drawable/ic_storage_grey_900_48dp"/>
+
+</menu>

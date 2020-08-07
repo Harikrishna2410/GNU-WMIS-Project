@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name1">Wharehouse Mobile Invoicing System</string>
+    <string name="app_name2">invoit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_new_customer_registration">Customer</string>
+    <string name="action_settings">Settings</string>
+    <string name="open_drawer">Open navigation drawer</string>
+    <string name="close_drawer">Close navigation drawer</string>
+    <string name="Splash_screen_1_description">Welcome to Invoit Mobile DSD Software for distributors.</string>
+
+    <string name="Rs">\u20B9</string>
+    <string name="generic_server_down" />
+    <string name="no_internet" />
+    <string name="generic_error" />
+    <string name="error_field_required">Email required</string>
+    <string name="email_field_required">Valid email required</string>
+    <string name="password_field_required">password required</string>
+
+    <string-array name="settings_email_software">
+        <item>Select Email Software</item>
+        <item>Bluetooth</item>
+        <item>Google Drive</item>
+        <item>Gmail</item>
+        <item>Xander</item>
+        <item>imo</item>
+        <item>Trello</item>
+        <item>Telegram</item>
+    </string-array>
+
+    <string name="Discount_prompt">Choose a country</string>
+
+    <string-array name="Discount_names">
+        <item>Choose a Discount</item>
+        <item>Percentage</item>
+        <item>Currency</item>
+    </string-array>
+
+    <string-array name="splash_screen_text">
+        <item>Welcome</item>
+        <item>to</item>
+        <item>The</item>
+        <item>New</item>
+        <item>Era</item>
+    </string-array>
+
+    <string-array name="default_order_type">
+        <item>Invoice</item>
+        <item>Sales Order</item>
+        <item>Estimate</item>
+    </string-array>
+
+    <string-array name="tax_type">
+        <item>CGST-SGST</item>
+        <item>IGST</item>
+    </string-array>
+
+    <string-array name="paymeny_method">
+        <item>Select Payment Method</item>
+        <item>Cash On Delivery</item>
+        <item>Chaque</item>
+    </string-array>
+
+</resources>

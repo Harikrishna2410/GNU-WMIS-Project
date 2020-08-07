@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Sync_Customers_Orders"
+        android:title="Send Customers and Orders"
+        android:icon="@drawable/ic_sync_white_48dp"
+         />
+
+    <item
+        android:id="@+id/UpdateAll"
+        android:title="Sync All"
+        android:icon="@drawable/ic_file_upload_white_48dp"
+        />
+</menu>

@@ -1,0 +1,12 @@
+create table if not exists customer_mst (
+	id integer primary key autoincrement, 
+	user_id integer not null,
+	full_name varchar(100), 
+	phone integer(13), 
+	address varchar(200), 
+	city varchar(50), 
+	state char(2),
+	country varchar(100), 
+	postal_code integer(6),
+	foreign key(user_id) references users(id));
+	

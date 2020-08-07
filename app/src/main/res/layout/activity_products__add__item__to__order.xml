@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:theme="@style/AppTheme"
+  tools:context=".Products.Products_Edit_Item">
+
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="192dp"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:fitsSystemWindows="true"
+      app:contentScrim="?attr/colorPrimary"
+      app:expandedTitleTextAppearance="@color/Transparent"
+      app:layout_scrollFlags="scroll|exitUntilCollapsed"
+      app:toolbarId="@+id/toolbar_productlist_activity">
+
+      <androidx.appcompat.widget.Toolbar
+        android:id="@+id/activity_products__edit__items_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+
+        app:popupTheme="@style/EditTextColorwhite"
+        app:title="Add Item">
+
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="right">
+
+          <Button
+            android:id="@+id/btn_save_additemtoorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/Transparent"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:fontFamily="@font/roboto"
+            android:text="SAVE"
+            android:textStyle="bold"
+            android:textColor="@color/White" />
+
+
+        </LinearLayout>
+
+
+      </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+  </com.google.android.material.appbar.AppBarLayout>
+
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+              android:id="@+id/textView12"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/roboto"
+              android:padding="10dp"
+              android:layout_weight="5"
+              android:text="Stock #"
+              android:textSize="20dp" />
+
+            <TextView
+              android:id="@+id/tv_stockno_act_prod_add_item_to_order"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="70"
+              android:layout_gravity="center"
+              android:fontFamily="@font/roboto"
+              android:text="12312345"
+              android:textSize="16dp" />
+
+
+            <ImageView
+              android:id="@+id/btn_dot"
+              android:layout_width="30dp"
+              android:layout_height="match_parent"
+              android:layout_gravity="center"
+              android:padding="5dp"
+              android:layout_weight="25"
+              android:clickable="true"
+              android:foreground="?attr/selectableItemBackground"
+              android:src="@mipmap/return_1"
+              />
+          </LinearLayout>
+
+          <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/ed_description_act_prod_add_item_to_order"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/roboto"
+              android:hint=" Product Name"
+              android:inputType="textMultiLine"
+              android:textAlignment="textStart"
+              android:textColor="#616161" />
+          </com.google.android.material.textfield.TextInputLayout>
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <com.google.android.material.textfield.TextInputLayout
+              android:id="@+id/textInputLayout2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="50"
+              android:gravity="center"
+              android:inputType="number"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent">
+
+              <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_qty_ord_act_prod_add_item_to_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:hint="Quantity"
+                android:inputType="number"
+                android:paddingRight="5dp"
+                android:selectAllOnFocus="true"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="#616161" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+              android:id="@+id/btn_plus"
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_gravity="center"
+              android:clickable="true"
+              android:foreground="?attr/selectableItemBackground"
+              android:src="@mipmap/icons8_plus_512"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toEndOf="@+id/textInputLayout2"
+              app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+              android:id="@+id/btn_minus"
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_gravity="center"
+              android:clickable="true"
+              android:foreground="?attr/selectableItemBackground"
+              android:src="@mipmap/minus_512px"
+              android:text="-"
+              android:textStyle="bold"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/textInputLayout2"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tv_price_act_prod_add_item_to_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:hint="Price"
+                android:inputType="numberDecimal|numberSigned"
+                android:selectAllOnFocus="true"
+                android:textAlignment="viewEnd"
+                android:textColor="#616161" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_cost_act_prod_add_item_to_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:fontFamily="@font/roboto"
+                android:hint="Cost"
+                android:inputType="numberDecimal"
+                android:textAlignment="viewEnd" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_discount_act_prod_add_item_to_order"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:enabled="false"
+                android:fontFamily="@font/roboto"
+                android:hint="Discount Rate"
+                android:inputType="numberDecimal|numberSigned"
+                android:selectAllOnFocus="true"
+                android:textAlignment="viewEnd" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <CheckBox
+              android:id="@+id/add_item_cb_taxable"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:button="@null"
+              android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+              android:enabled="true"
+              android:fontFamily="@font/roboto"
+              android:text="Taxable" />
+
+            <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_tax_rate_act_prod_add_item_to_order"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:enabled="false"
+                android:fontFamily="@font/roboto"
+                android:hint="Tax Rate"
+                android:inputType="numberDecimal|numberSigned"
+                android:selectAllOnFocus="true"
+                android:textAlignment="viewEnd" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+          </LinearLayout>
+
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

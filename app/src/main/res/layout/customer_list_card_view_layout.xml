@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_margin="5dp"
+  app:cardCornerRadius="10dp"
+  app:cardElevation="2dp"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  >
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:background="#ffffff"
+      android:focusable="true"
+      android:clickable="true"
+      android:foreground="?android:attr/selectableItemBackground"
+      android:padding="5dp"
+      android:id="@+id/customer_list_card_name">
+
+        <TextView
+          android:id="@+id/tv_customer_name"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:fontFamily="@font/roboto"
+          android:letterSpacing="0.04"
+          android:paddingLeft="12dp"
+          android:paddingTop="10dp"
+          android:paddingRight="10dp"
+          android:text="Bioplus Speciality Medical"
+          android:textColor="#616161"
+          android:textSize="14dp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toStartOf="@+id/btn_new_order_custlist"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+          android:id="@+id/tv_cust_address_cust_list"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/roboto"
+          android:paddingBottom="10dp"
+          android:paddingTop="5dp"
+          android:paddingStart="13dp"
+          android:paddingLeft="15dp"
+          android:textColor="#616161"
+          android:text="address"
+          android:textSize="11dp"
+          app:layout_constraintEnd_toStartOf="@+id/btn_new_order_custlist"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/tv_customer_name" />
+
+        <LinearLayout
+          android:id="@+id/btn_new_order_custlist"
+          android:layout_width="50dp"
+          android:layout_height="0dp"
+          android:gravity="center"
+          android:focusable="true"
+          android:clickable="true"
+          android:foreground="?android:attr/selectableItemBackground"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+              android:id="@+id/imageView4"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:src="@drawable/icons8_create_order_100"
+              tools:layout_editor_absoluteX="300dp"
+              tools:layout_editor_absoluteY="-2dp"
+              app:civ_border_width="0.5dp"
+              app:civ_border_color="#616161"/>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+

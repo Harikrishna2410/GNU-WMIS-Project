@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="Primary">#3E67D6</color>
+    <color name="PrimaryDary">#007ac1</color>
+    <color name="Secondary">#3E67D6</color>
+<!--    <color name="Secondary">#039be5</color>-->
+    <color name="Transparent">#00000000</color>
+    <color name="LightWhitre">#CAFFFFFF</color>
+    <color name="White">#fff</color>
+    <color name="material_grey_50">#fffafafa</color>
+    <color name="darkblue">#1A237E</color>
+    <color name="darktransparent">#D5000000</color>
+    <color name="blueesh">#0093E9</color>
+    <color name="grayesh">#383838</color>
+    <color name="gradient1">#1488CC </color>
+    <color name="gradient2">#2B32B2</color>
+    <color name="new_blue">#3E67D6</color>
+    <color name="Primary2">#03A9F4</color>
+</resources>

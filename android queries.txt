@@ -1,0 +1,96 @@
+******************************** product list query  VERSION 1 *******************************************************************
+select p.id, p.imgUrl, p.barcodeno, p.name, p.cost, p.quantity, p.is_active, p.reorder_level, p.expires_at, p.days_left,
+                tr.id as TaxRuleID,
+                c.id as catId, c.name as catName,
+                s.id as supId, s.name as supName,
+
+        p.price, p.discount_type as discTyp, 
+        cast(p.discount_rate as float) as discRate,
+        =
+        case when p.discount_type = 0 then round((p.price*p.discount_rate/100),2)
+             else round(p.discount_rate,2) end as discAmt,
+
+        case when p.discount_type = 0 then p.price-round((p.price*p.discount_rate/100),2)
+             else p.price-round(p.discount_rate,2) end as Price_after_discount,
+            
+        p.is_taxable, 
+        case when tr.rate is null then 0 
+             else tr.rate end as TaxRate,
+
+        case when p.is_taxable = 1 then round((case when p.discount_type = 0 then p.price-round((p.price*p.discount_rate/100),2) 
+                                                    else p.price-round(p.discount_rate,2) end) * case when tr.rate is null then 0 else tr.rate end/100,2)
+             else 0 end as tax_discounted_price,
+    
+        
+        case when p.is_taxable = 1 then (case when p.discount_type = 0 then p.price-round((p.price*p.discount_rate/100),2) else p.price-round(p.discount_rate,2) end) 
+                                      + (case when p.is_taxable = 1 then round((case when p.discount_type = 0 then p.price-round((p.price*p.discount_rate/100),2) 
+                                              else p.price-round(p.discount_rate,2) end) * case when tr.rate is null then 0 else tr.rate end/100,2)
+             else 0 end)
+        else 0 end as amount_after_tax
+            
+        from products p
+        left join tax_rules tr on tr.id = p.tax_rule_id
+        left join category c on c.id = p.category_id
+        left join suppliers s on s.id = p.supplier_id
+		
+******************************************* product list query  VERSION 2 ************************************************************	
+
+select p.id, p.imgUrl, p.barcodeno, p.name, printf ("%.2f",p.cost) as cost, p.quantity, p.is_active, p.reorder_level, p.expires_at, p.days_left,
+                tr.id as TaxRuleID,
+                c.id as catId, c.name as catName,
+                s.id as supId, s.name as supName,
+
+        printf ("%.2f",p.price) as price, 
+        p.discount_type as discTyp, 
+        printf ("%.2f",cast(p.discount_rate as float)) as discRate,
+        
+        case when p.discount_type = 0 then printf ("%.2f",round((p.price*p.discount_rate/100),2))
+             else printf ("%.2f",round(p.discount_rate,2)) end as discAmt,
+
+        case when p.discount_type = 0 then p.price-round((p.price*p.discount_rate/100),2)
+             else p.price-round(p.discount_rate,2) end as Price_after_discount,
+            
+        p.is_taxable, 
+        printf ("%.2f",case when tr.rate is null then 0 else tr.rate end) as TaxRate,
+
+        case when p.is_taxable = 1 then printf ("%.2f",round((case when p.discount_type = 0 then p.price-round((p.price*p.discount_rate/100),2) 
+                                                    else p.price-round(p.discount_rate,2) end) * case when tr.rate is null then 0 else tr.rate end/100,2))
+             else printf ("%.2f",0) end as tax_discounted_price,
+    
+        
+        case when p.is_taxable = 1 then printf ("%.2f",(case when p.discount_type = 0 then p.price-round((p.price*p.discount_rate/100),2) else p.price-round(p.discount_rate,2) end) 
+                                      + (case when p.is_taxable = 1 then round((case when p.discount_type = 0 then p.price-round((p.price*p.discount_rate/100),2) 
+                                              else p.price-round(p.discount_rate,2) end) * case when tr.rate is null then 0 else tr.rate end/100,2)
+             else 0 end))
+        else printf ("%.2f",0) end as amount_after_tax
+            
+        from products p
+        left join tax_rules tr on tr.id = p.tax_rule_id
+        left join category c on c.id = p.category_id
+        left join suppliers s on s.id = p.supplier_id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.admin.warehousemobileinvoicingsystem">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="false"
+        android:icon="@mipmap/invoit_logo_1"
+        android:label="@string/app_name2"
+        android:roundIcon="@mipmap/invoit_logo_1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:usesCleartextTraffic="true"
+        tools:node="replace">
+        <activity android:name=".Slider_activity"></activity>
+        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".Splash_screen_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Website_Activity.Signup_registration"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Website_Activity.Forget_Password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.Company_Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reports.Daily_Reports_Activity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Customers.Activity_Signature"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Customers.Order_pay_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Main_Menu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Customers.Customer_List"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Customers.NewCustomerRegistration"
+            android:label="@string/title_activity_new_customer_registration"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customers.Customer_new_order"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Products.Product_List"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Products.Products_Edit_Item"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Customers.Products_Add_Item_To_Order"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Orders.Orders_List_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Settings.Preference_Compeny_Info"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Customers.ScanActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

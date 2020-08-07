@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/customer_info_coordinatorlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme">
+
+    <com.google.android.material.appbar.AppBarLayout
+     android:id="@+id/appbar"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:theme="@style/AppTheme.AppBarOverlay">
+
+     <com.google.android.material.appbar.CollapsingToolbarLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:fitsSystemWindows="true"
+         app:contentScrim="?attr/colorPrimary"
+         app:expandedTitleTextAppearance="@color/Transparent"
+         app:layout_scrollFlags="scroll|exitUntilCollapsed"
+         app:toolbarId="@+id/toolbar_productlist_activity">
+
+         <androidx.appcompat.widget.Toolbar
+             android:id="@+id/customer_info_toolbar"
+             android:layout_width="match_parent"
+             android:layout_height="?attr/actionBarSize"
+             app:layout_collapseMode="pin"
+             app:popupTheme="@style/EditTextColorwhite"
+             app:title="Customer Information">
+
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="right">
+
+                 <Button
+                     android:id="@+id/btn_new_order"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:background="@color/Transparent"
+                     android:text="NEW ORDER"
+                     android:clickable="true"
+                     android:foreground="?attr/selectableItemBackground"
+                     android:textColor="@color/LightWhitre" />
+             </LinearLayout>
+
+         </androidx.appcompat.widget.Toolbar>
+     </com.google.android.material.appbar.CollapsingToolbarLayout>
+ </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="true">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textview27"
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_store_name_customerinformationactivity"
+                        android:layout_width="323dp"
+                        android:layout_height="wrap_content"
+                        android:text="XYZ Warehouse"
+                        android:textSize="20dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView269"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_store_owner_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="owner name"
+                        android:textSize="20dp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_store_phoneno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8889990000"
+                        android:textSize="20dp"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_store_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="123 Abc St"
+                        android:textSize="20dp"
+                        android:maxLines="4"
+                        android:lines="2"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="City"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_store_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ahmedabad"
+                        android:textSize="20dp"/>
+                </TableRow>
+
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

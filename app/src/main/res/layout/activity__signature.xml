@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".Customers.Activity_Signature">
+
+  <androidx.appcompat.widget.Toolbar
+    android:id="@+id/orderpayavtivity_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:title="Signature">
+
+  </androidx.appcompat.widget.Toolbar>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/orderpayavtivity_toolbar">
+
+
+    <com.github.gcacace.signaturepad.views.SignaturePad
+      android:id="@+id/signature_pad"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:background="@color/translucent"
+      app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+      app:layout_constraintTop_toTopOf="parent"
+      app:penColor="@color/black"
+      app:penMaxWidth="2dp"
+      app:penMinWidth="2dp" />
+
+    <FrameLayout
+      android:id="@+id/frameLayout"
+      android:layout_width="fill_parent"
+      android:layout_height="1dp"
+      android:layout_marginBottom="8dp"
+      android:background="@android:color/darker_gray"
+      app:layout_constraintBottom_toTopOf="@+id/signature_pad_description"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+      android:id="@+id/signature_pad_description"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      android:text="I agree the terms and conditions."
+      android:textColor="@android:color/darker_gray"
+      app:layout_constraintBottom_toTopOf="@+id/linearLayout15"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+      android:id="@+id/linearLayout15"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="10dp"
+      android:weightSum="2"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent">
+
+      <Button
+        android:id="@+id/btn_activity_signature_clear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="5dp"
+        android:paddingLeft="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/gradient2"
+        android:drawableLeft="@drawable/autograph_96px"
+        android:fontFamily="@font/roboto"
+        android:text="clear signature"
+        android:textSize="12dp"
+        android:textColor="#616161" />
+
+      <Button
+        android:id="@+id/btn_activity_signature_save"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:paddingRight="5dp"
+        android:background="@drawable/gradient2"
+        android:drawableRight="@drawable/sort_right_96px"
+        android:fontFamily="@font/roboto"
+        android:text="save &amp; continue"
+        android:textSize="12dp"
+        android:textColor="#616161" />
+
+    </LinearLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

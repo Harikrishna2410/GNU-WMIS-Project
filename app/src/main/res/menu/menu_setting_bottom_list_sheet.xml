@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:menuCategory="container">
+
+        <item android:title="Settings"
+            android:id="@+id/settings_dialog"
+            android:icon="@drawable/ic_settings_grey_900_48dp"/>
+
+        <item android:id="@+id/Check_for_updates_dialog"
+            android:title="Check For Updates"
+            android:icon="@drawable/ic_update_grey_900_48dp"/>
+
+        <item android:title="Help"
+            android:icon="@drawable/ic_help_grey_900_48dp"
+            android:id="@+id/help_dialog"/>
+
+
+        <item android:title="Logout &amp; Exit"
+            android:icon="@drawable/ic_exit_to_app_grey_900_48dp"
+             android:id="@+id/logout_dialog"/>
+
+    </group>
+
+</menu>

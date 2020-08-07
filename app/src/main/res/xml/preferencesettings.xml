@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <PreferenceCategory android:title="Settings">
+
+    <Preference
+      android:enabled="true"
+      android:key="pref_compny_info"
+      android:summary="Allow you to change the general company information"
+      android:title="Company Information">
+
+    </Preference>
+
+    <ListPreference
+      android:enabled="true"
+      android:entries="@array/default_order_type"
+      android:entryValues="@array/default_order_type"
+      android:key="pref_default_order_type"
+      android:summary="Set the default order type"
+      android:title="Default order type" />
+
+    <EditTextPreference
+      android:editable="false"
+      android:enabled="true"
+      android:key="pref_last_order_no"
+      android:summary="Set the last Invoice number"
+      android:title="Last Invoice #" />
+
+    <EditTextPreference
+      android:editable="false"
+      android:key="pref_last_sales_order_no"
+      android:summary="set the last Sales Order Number"
+      android:title="Last Sales Order #" />
+
+    <EditTextPreference
+      android:editable="false"
+      android:key="pref_last_estimate_no"
+      android:shouldDisableView="true"
+      android:summary="Set the Last Estimate Number"
+      android:title="Last Estimate Number #" />
+
+
+    <CheckBoxPreference
+      android:checked="true"
+      android:enabled="true"
+      android:key="pref_require_signature"
+      android:summary="Customer signature is required on invoice"
+      android:title="Require Signature" />
+
+    <CheckBoxPreference
+      android:enabled="true"
+      android:key="pref_hide_inventory_balance"
+      android:summary="Hide the Stock Quantity of Inventory Items"
+      android:title="Hide Stock Inventory" />
+
+    <CheckBoxPreference
+      android:enabled="true"
+      android:key="pref_hide_cost"
+      android:summary="Hide the Cost of Items"
+      android:title="Hide Item Cost" />
+
+    <Preference
+      android:key="pref_select_printer"
+      android:summary="Select a bluetooth printer for printing invoice and reports"
+      android:title="Select printer" />
+
+  </PreferenceCategory>
+
+  <PreferenceCategory
+    android:key="pref_database_option"
+    android:summary="Options to Backups,Restore and Re-Initialize the database"
+    android:title="Database Option">
+
+    <CheckBoxPreference
+      android:defaultValue="true"
+      android:enabled="true"
+      android:summary="Backup All Data Before Syncing"
+      android:title="Auto Backup" />
+
+    <Preference
+      android:summary="Backup the current database"
+      android:title="Backup Database" />
+
+  </PreferenceCategory>
+
+</PreferenceScreen>
